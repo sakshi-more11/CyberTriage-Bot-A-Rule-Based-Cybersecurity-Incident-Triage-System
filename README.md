@@ -1,4 +1,4 @@
-# CyberTriage-Bot 🛡️
+ # CyberTriage-Bot 🛡️
 ### A Rule-Based Chatbot for Cybersecurity Incident Triage
 
 CyberTriage-Bot is a **rule-based chatbot** that helps non-security staff quickly
