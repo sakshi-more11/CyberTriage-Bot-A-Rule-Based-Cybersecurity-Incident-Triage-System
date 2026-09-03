@@ -1,0 +1,115 @@
+{
+  "categories": [
+    {
+      "id": "ransomware",
+      "name": "Ransomware",
+      "keywords": ["ransomware", "files locked", "files encrypted", "encrypted my files",
+                   "pay to unlock", "decrypt", "ransom", "locked out of my files",
+                   "demanding payment", "bitcoin to unlock", ".locked", "cannot open my files"],
+      "severity": "Critical",
+      "escalate": true,
+      "actions": [
+        "Immediately disconnect the affected device from the network (unplug Ethernet / turn off Wi-Fi).",
+        "Do NOT pay the ransom and do NOT restart the device.",
+        "Do not attempt to delete or rename the encrypted files.",
+        "Report to the security/IT team immediately as a Critical incident.",
+        "Preserve the ransom note as evidence for the security team."
+      ]
+    },
+    {
+      "id": "phishing",
+      "name": "Phishing",
+      "keywords": ["phishing", "suspicious email", "asking for my password", "asking for otp",
+                   "asking for my bank otp", "fake link", "click this link", "urgent payment email",
+                   "email asking for", "suspicious attachment", "fake invoice", "spoofed email",
+                   "verify your account email", "won a prize email"],
+      "severity": "Medium",
+      "escalate": false,
+      "actions": [
+        "Do not click any links or download attachments in the email.",
+        "Do not reply with any personal or financial information.",
+        "Report the email to IT/security using the 'report phishing' option.",
+        "If you already clicked a link or entered credentials, change that password immediately and notify IT.",
+        "Delete the email after reporting it."
+      ]
+    },
+    {
+      "id": "unauthorized_access",
+      "name": "Unauthorized Access",
+      "keywords": ["unknown location login", "logged in from unknown location", "account accessed",
+                   "someone logged into my account", "unauthorized login", "unrecognized device",
+                   "login alert i did not request", "account compromised", "someone is in my account",
+                   "password changed without my knowledge", "strange login attempt"],
+      "severity": "High",
+      "escalate": true,
+      "actions": [
+        "Change your password immediately from a trusted, uncompromised device.",
+        "Enable multi-factor authentication (MFA) if not already active.",
+        "Review recent account activity and revoke sessions/devices you don't recognize.",
+        "Notify the security team so they can check for further compromise.",
+        "Check for unauthorized changes to account recovery details (email/phone)."
+      ]
+    },
+    {
+      "id": "malware",
+      "name": "Malware / Virus",
+      "keywords": ["virus", "malware", "trojan", "antivirus alert", "pop up ads everywhere",
+                   "pop-ups", "pop ups", "strange pop", "running very slow",
+                   "system running very slow suddenly", "unknown program installed",
+                   "suspicious process running", "device acting strange", "spyware",
+                   "keylogger", "infected file", "usb infected"],
+      "severity": "High",
+      "escalate": true,
+      "actions": [
+        "Disconnect the device from the network to prevent spread.",
+        "Do not open any unfamiliar files or programs.",
+        "Run a full antivirus/anti-malware scan if the device is still safe to use.",
+        "Report the incident to IT/security with details of what you observed.",
+        "Avoid using the device for sensitive logins (banking, email) until it is cleared."
+      ]
+    },
+    {
+      "id": "data_leak",
+      "name": "Data Leak / Exposure",
+      "keywords": ["data leak", "confidential file shared", "sent sensitive data to wrong person",
+                   "uploaded file publicly by mistake", "database exposed", "leaked credentials",
+                   "accidentally shared confidential", "shared confidential", "wrong person",
+                   "public s3 bucket", "data breach"],
+      "severity": "Critical",
+      "escalate": true,
+      "actions": [
+        "Immediately revoke access/sharing on the exposed file or resource if possible.",
+        "Do not attempt to quietly delete the shared item without informing security — an audit trail is needed.",
+        "Report to the security/compliance team immediately as a Critical incident.",
+        "Identify exactly what data was exposed and to whom.",
+        "Prepare for possible breach-notification obligations depending on data sensitivity."
+      ]
+    },
+    {
+      "id": "physical_device",
+      "name": "Lost / Stolen Device",
+      "keywords": ["lost my laptop", "lost my work laptop", "stolen laptop", "phone stolen",
+                   "lost my phone", "device stolen", "misplaced company laptop", "lost work laptop"],
+      "severity": "High",
+      "escalate": true,
+      "actions": [
+        "Report the loss/theft to IT/security immediately.",
+        "Remotely lock or wipe the device if management tools are available.",
+        "Change passwords for all accounts that were logged in on the device.",
+        "File a report with local authorities if it was stolen.",
+        "Revoke any active sessions tied to that device."
+      ]
+    }
+  ],
+  "default": {
+    "id": "unclassified",
+    "name": "Unclassified",
+    "severity": "Low",
+    "escalate": false,
+    "actions": [
+      "This description didn't clearly match a known incident pattern.",
+      "Try describing it with more specific detail (e.g. what happened, what device/account was involved).",
+      "If you believe this is a genuine security concern, report it to your IT/security team directly."
+    ]
+  }
+}
