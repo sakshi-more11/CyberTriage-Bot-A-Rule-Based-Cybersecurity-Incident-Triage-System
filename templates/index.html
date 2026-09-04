@@ -24,11 +24,11 @@
       <div class="nav-right">
         <div class="stat">
           <span class="stat-label">rules loaded</span>
-          <span class="stat-value">6 categories</span>
+          <span class="stat-value">11 categories</span>
         </div>
         <div class="stat stat-hide-mobile">
           <span class="stat-label">engine</span>
-          <span class="stat-value">keyword match v1</span>
+          <span class="stat-value">keyword match v2</span>
         </div>
 
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme">
@@ -54,8 +54,8 @@
           <div class="msg msg-bot">
             <div class="msg-bubble">
               Describe what happened and I'll classify the severity and give you
-              immediate next steps. For example: <em>"I got an email asking for my bank OTP"</em>
-              or <em>"my files are locked and it's asking for payment."</em>
+              immediate next steps. You can also enter a short term such as <em>"phishing"</em>,
+              <em>"GPay money deducted"</em>, or <em>"my laptop is running slow"</em>.
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
           <input
             type="text"
             id="userInput"
-            placeholder="Describe the incident..."
+            placeholder="Describe an issue or enter a cybersecurity term..."
             autocomplete="off"
             required
           />
@@ -82,7 +82,7 @@
           <h3>How it works</h3>
           <ol class="steps">
             <li>Describe the incident in plain language</li>
-            <li>The rule engine matches keywords against 6 known categories</li>
+            <li>The rule engine matches keywords against 11 common issue categories</li>
             <li>You get a severity level and immediate response actions</li>
           </ol>
         </div>
@@ -106,8 +106,24 @@
             <span class="chip">Malware</span>
             <span class="chip">Data Leak</span>
             <span class="chip">Lost / Stolen Device</span>
+            <span class="chip">UPI / Payment Safety</span>
+            <span class="chip">Password Help</span>
+            <span class="chip">Account Privacy</span>
+            <span class="chip">Device Performance</span>
+            <span class="chip">Cybersecurity Basics</span>
           </div>
         </div>
+
+          <div class="side-card">
+            <h3>Try these examples</h3>
+            <ul class="steps">
+              <li><em>phishing</em></li>
+              <li><em>GPay money deducted</em></li>
+              <li><em>my Instagram password is not working</em></li>
+              <li><em>my laptop is running slow</em></li>
+              <li><em>someone logged into my account</em></li>
+            </ul>
+          </div>
 
         <div class="side-card side-note">
           <h3>Reference framework</h3>

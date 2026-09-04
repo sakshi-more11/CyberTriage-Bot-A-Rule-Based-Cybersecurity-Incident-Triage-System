@@ -19,7 +19,7 @@
     {
       "id": "phishing",
       "name": "Phishing",
-      "keywords": ["phishing", "suspicious email", "asking for my password", "asking for otp",
+      "keywords": ["phishing", "phising", "suspicious email", "asking for my password", "asking for otp",
                    "asking for my bank otp", "fake link", "click this link", "urgent payment email",
                    "email asking for", "suspicious attachment", "fake invoice", "spoofed email",
                    "verify your account email", "won a prize email"],
@@ -39,7 +39,8 @@
       "keywords": ["unknown location login", "logged in from unknown location", "account accessed",
                    "someone logged into my account", "unauthorized login", "unrecognized device",
                    "login alert i did not request", "account compromised", "someone is in my account",
-                   "password changed without my knowledge", "strange login attempt"],
+                   "password changed without my knowledge", "strange login attempt", "my account is hacked",
+                   "account hacked", "hacked account", "someone hacked", "someone logged in", "my account was hacked"],
       "severity": "High",
       "escalate": true,
       "actions": [
@@ -54,7 +55,7 @@
       "id": "malware",
       "name": "Malware / Virus",
       "keywords": ["virus", "malware", "trojan", "antivirus alert", "pop up ads everywhere",
-                   "pop-ups", "pop ups", "strange pop", "running very slow",
+                   "pop-ups", "pop ups", "strange pop",
                    "system running very slow suddenly", "unknown program installed",
                    "suspicious process running", "device acting strange", "spyware",
                    "keylogger", "infected file", "usb infected"],
@@ -98,6 +99,82 @@
         "Change passwords for all accounts that were logged in on the device.",
         "File a report with local authorities if it was stolen.",
         "Revoke any active sessions tied to that device."
+      ]
+    },
+    {
+      "id": "payment_or_upi_problem",
+      "name": "Payment / UPI Safety",
+      "keywords": ["gpay", "google pay", "g pay", "upi", "payment pending", "money debited", "money deducted",
+                   "money lost", "money stolen", "stolen money", "money was stolen", "unauthorized transaction", "unknown transaction", "bank fraud",
+                   "card charged", "payment failed", "payment not received", "sent money to wrong person", "scam payment",
+                   "otp scam", "upi fraud"],
+      "severity": "High",
+      "escalate": true,
+      "actions": [
+        "Do not share your OTP, UPI PIN, card PIN, CVV, or screen with anyone; receiving money never requires a PIN.",
+        "Check the transaction in the official payment/bank app and save the transaction ID, time, amount, and screenshots.",
+        "For an unauthorized transaction, immediately contact your bank or payment provider through its official app or number and request that the account/card be secured.",
+        "Change the payment-app password/PIN from a trusted device and remove unknown devices or linked accounts.",
+        "Report suspected fraud promptly to your local cybercrime or financial-fraud reporting service."
+      ]
+    },
+    {
+      "id": "password_account_recovery",
+      "name": "Password / Account Help",
+      "keywords": ["password", "forgot password", "reset password", "password problem", "password not working",
+                   "google account", "gmail", "instagram", "insta", "facebook", "social media account",
+                   "account recovery", "recover account", "locked out", "cannot login", "can't login", "login problem"],
+      "severity": "Medium",
+      "escalate": false,
+      "actions": [
+        "Use only the service's official app or website and its built-in password-reset or account-recovery page.",
+        "Create a new, unique passphrase; do not reuse a password from email, banking, or another important account.",
+        "Turn on two-factor authentication (prefer an authenticator app where available) and store backup codes safely.",
+        "Review recovery email, phone number, logged-in devices, and recent activity; remove anything you do not recognize.",
+        "Never give a password, recovery code, OTP, or verification link to a person claiming to be support."
+      ]
+    },
+    {
+      "id": "account_privacy",
+      "name": "Account Privacy / Security",
+      "keywords": ["privacy", "account privacy", "secure my account", "secure account", "protect account",
+                   "two factor", "2fa", "mfa", "permissions", "app permissions", "location sharing",
+                   "private account", "data tracking", "who can see my profile"],
+      "severity": "Medium",
+      "escalate": false,
+      "actions": [
+        "Open the account's Privacy and Security settings using the official app or website.",
+        "Use a unique password and enable two-factor authentication.",
+        "Limit profile visibility, location sharing, and third-party app permissions to only what you need.",
+        "Remove unfamiliar connected apps, browser extensions, devices, and active sessions.",
+        "Keep your recovery email and phone number current and protected."
+      ]
+    },
+    {
+      "id": "device_performance",
+      "name": "Device Performance / Basic Safety",
+      "keywords": ["slow", "slow laptop", "slow computer", "laptop slow", "computer slow", "phone slow", "slow device",
+                   "lagging", "freezing", "overheating", "battery draining", "storage full", "wifi slow"],
+      "severity": "Low",
+      "escalate": false,
+      "actions": [
+        "Restart the device, install trusted system updates, and check storage space and unnecessary startup apps.",
+        "Run a full scan with your installed antivirus or the device's built-in security tool; do not install random cleaner apps.",
+        "If the slowness started after a suspicious download, pop-up, or unknown app, disconnect from the internet and seek IT/security help."
+      ]
+    },
+    {
+      "id": "cybersecurity_basics",
+      "name": "Cybersecurity Basics",
+      "keywords": ["cybersecurity", "hacking", "hacker", "cyber attack", "scam", "online scam", "identity theft",
+                   "firewall", "vpn", "ddos", "brute force", "social engineering", "security tips"],
+      "severity": "Low",
+      "escalate": false,
+      "actions": [
+        "Cybersecurity means protecting devices, accounts, networks, and data from unauthorized access, scams, and damage.",
+        "Hacking is attempting to access or affect a system without permission; never attempt it on accounts, devices, or networks you do not own or have written permission to test.",
+        "Use unique passwords, multi-factor authentication, software updates, backups, and caution with links or downloads as your core protection.",
+        "If this relates to a real compromise, describe what happened (account, device, message, payment, or data) so it can be triaged more precisely."
       ]
     }
   ],

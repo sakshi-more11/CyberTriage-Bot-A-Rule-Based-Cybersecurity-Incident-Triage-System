@@ -42,7 +42,11 @@ class RuleEngine:
         matches = []
         for category in self.categories:
             for keyword in category["keywords"]:
-                if self._normalize(keyword) in normalized:
+                normalized_keyword = self._normalize(keyword)
+                # Word boundaries prevent short keywords such as "otp" from
+                # matching an unrelated word.  This also supports one-word
+                # queries (for example, "phishing" or "malware").
+                if re.search(r"(?<![a-z0-9])" + re.escape(normalized_keyword) + r"(?![a-z0-9])", normalized):
                     matches.append(category)
                     break
 
@@ -51,6 +55,8 @@ class RuleEngine:
             result["matched_keyword"] = None
             return result
 
+        # A higher severity always wins, which is safer when an input contains
+        # both a broad term ("password") and an urgent signal ("stolen").
         best = max(matches, key=lambda c: SEVERITY_RANK[c["severity"]])
         result = dict(best)
         return result
