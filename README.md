@@ -3,6 +3,7 @@
 **A rule-based cybersecurity incident triage chatbot** — describe what happened in plain English, and it classifies the severity, flags whether to escalate, and hands you the exact next steps to take. Built on classification logic inspired by **NIST SP 800-61**, the industry-standard Computer Security Incident Handling Guide.
 
 <p>
+  <a href="https://cybertriage-bot.onrender.com"> <img src="https://img.shields.io/badge/Live%20Demo-Click%20Here-success?logo=render&logoColor=white" /> </a>
   <img src="https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Flask-3.0-000000?logo=flask&logoColor=white" />
   <img src="https://img.shields.io/badge/Engine-Rule--Based-22d3ee" />
@@ -19,6 +20,9 @@
 📋 Hands you a ready-to-follow action checklist
 📖 Also works as a mini cybersecurity glossary — just type a term
 🧭 Modeled on real SOC playbook logic (NIST SP 800-61)
+
+
+🔗 **Live Demo:** [cybertriage-bot.onrender.com](https://cybertriage-bot.onrender.com)
 
 ---
 
