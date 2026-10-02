@@ -26,6 +26,16 @@
 
 ---
 
+## 📸 Screenshots
+<p align="center">
+  <img alt="Chat UI" src="https://github.com/user-attachments/assets/b517d4e1-a244-40bc-85ee-89ff83cc989e" width="70%" />
+</p>
+<p align="center">
+  <img alt="Triage result" src="https://github.com/user-attachments/assets/e83117b6-b505-4b16-9fcf-f4e294945c18" width="48%" />
+  <img alt="Theme toggle" src="https://github.com/user-attachments/assets/a64f9209-51b0-4f83-b8ba-747e02ed29b8" width="48%" />
+</p>
+
+
 ## ✨ Features
 
 - 🗂️ **11-Category Rule Engine** — ransomware, phishing, malware, data leaks, unauthorized access & more, all pattern-matched in real time
